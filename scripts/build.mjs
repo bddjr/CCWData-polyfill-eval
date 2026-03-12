@@ -19,7 +19,7 @@ const result = minify_sync(src, {
 })
 
 const code = ''.concat(
-    '/*CCWData-polyfill-eval*/toString.constructor`',
+    '/*<https://github.com/bddjr/CCWData-polyfill-eval>*/toString.constructor`',
     result.code
         .replace(/;?\s*$/, '')
         .replaceAll(/[()= \n\\`"]|\$\{/g, (m) => {

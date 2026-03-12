@@ -2,29 +2,19 @@
 
 // jsonObj./*CCWData-polyfill-eval*/toString.constructor`
 (function (jsonObj) {
-    function _typeof(e) {
-        return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
-            return typeof e
-        }
-            : function (e) {
-                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-            }
-            ,
-            _typeof(e)
-    }
     try {
-        if (!document.location) {
-            // CSense
-            delete this.getValueInJSON;
-            delete this.setValueInJSON;
-            return {
-                toJSON() {
-                    throw ''
-                }
-            }
-        }
         // polyfill
         window.Function = toString.constructor;
+        function _typeof(e) {
+            return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
+                return typeof e
+            }
+                : function (e) {
+                    return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                }
+                ,
+                _typeof(e)
+        };
         ((source) => {
             const vm = (() => {
                 try {
